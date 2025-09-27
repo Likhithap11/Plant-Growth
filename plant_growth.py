@@ -78,5 +78,5 @@ st.write("""
 3. Select Soil Type, Water Frequency, and Fertilizer Type from the dropdowns.
 4. Click **Predict** to see the predicted plant growth classification.
 """)
-```
+
 
