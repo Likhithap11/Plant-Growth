@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 import pandas as pd
 import joblib
@@ -52,4 +51,3 @@ st.write("""
 2. Adjust sliders for features like Height, Width, Soil Moisture, and Sunlight Hours.
 3. Click **Predict** to see the predicted plant growth classification.
 """)
-```
