@@ -1,4 +1,4 @@
-```python
+# %%
 import streamlit as st
 import pandas as pd
 import joblib
@@ -79,3 +79,4 @@ st.write("""
 4. Click **Predict** to see the predicted plant growth classification.
 """)
 ```
+
