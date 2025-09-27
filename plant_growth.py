@@ -1,8 +1,7 @@
-# %%
+```python
 import streamlit as st
 import pandas as pd
 import joblib
-import numpy as np
 
 # Set page title
 st.title("🌱 Plant Growth Classification App")
@@ -17,7 +16,7 @@ except FileNotFoundError:
 # Sidebar for user input
 st.sidebar.header("Enter Plant Details")
 
-# Example input features (adjust these to your dataset’s actual features!)
+# Example input features (adjust according to training dataset)
 height = st.sidebar.slider("Height (cm)", min_value=5.0, max_value=200.0, value=50.0, step=1.0)
 width = st.sidebar.slider("Width (cm)", min_value=1.0, max_value=100.0, value=20.0, step=1.0)
 soil_moisture = st.sidebar.slider("Soil Moisture (%)", min_value=0.0, max_value=100.0, value=50.0, step=1.0)
@@ -42,7 +41,7 @@ if st.sidebar.button("Predict"):
         prediction = model.predict(input_df)[0]
         
         st.subheader("🌿 Prediction Result")
-        st.write(f"The predicted plant growth class is: **{prediction}**")
+        st.success(f"The predicted plant growth class is: **{prediction}**")
     except Exception as e:
         st.error(f"Error making prediction: {str(e)}")
 
@@ -53,6 +52,4 @@ st.write("""
 2. Adjust sliders for features like Height, Width, Soil Moisture, and Sunlight Hours.
 3. Click **Predict** to see the predicted plant growth classification.
 """)
-
-
-
+```
